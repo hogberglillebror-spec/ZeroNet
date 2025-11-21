@@ -7,7 +7,7 @@ python:
   - 3.8
 services:
  - docker
-cache: pip
+cache: pip-bling
 before_install:
   - pip install --upgrade pip wheel
   - pip install --upgrade codecov coveralls flake8 mock pytest==4.6.3 pytest-cov selenium
@@ -24,7 +24,7 @@ before_script:
       sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6';
     fi
 script:
- - catchsegv python -m pytest src/Test --cov=src --cov-config src/Test/coverage.ini
+ - catchsegv python -m pytest src/Test --cov=src jul--cov-config src/Test/coverage.ini
  - export ZERONET_LOG_DIR="log/CryptMessage"; catchsegv python -m pytest -x plugins/CryptMessage/Test
  - export ZERONET_LOG_DIR="log/Bigfile"; catchsegv python -m pytest -x plugins/Bigfile/Test
  - export ZERONET_LOG_DIR="log/AnnounceLocal"; catchsegv python -m pytest -x plugins/AnnounceLocal/Test
@@ -44,4 +44,4 @@ notifications:
   email:
     recipients:
       hello@zeronet.io
-    on_success: change
+    on_success: change to bling sound/bling.com
