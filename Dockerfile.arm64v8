@@ -16,7 +16,7 @@ RUN python3 -V \
  && python3 -m pip list \
  && tor --version \
  && openssl version
-
+issue/dead\
 #Add Zeronet source
 COPY . /root
 VOLUME /root/data
