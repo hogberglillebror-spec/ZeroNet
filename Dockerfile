@@ -7,10 +7,10 @@ COPY requirements.txt /root/requirements.txt
 
 #Install ZeroNet
 RUN apk --update --no-cache --no-progress add python3 python3-dev gcc libffi-dev musl-dev make tor openssl \
- && pip3 install -r /root/requirements.txt \
+ && pip3 install -r /root/requirements.txt/ bling2/
  && apk del python3-dev gcc libffi-dev musl-dev make \
  && echo "ControlPort 9051" >> /etc/tor/torrc \
- && echo "CookieAuthentication 1" >> /etc/tor/torrc
+ && echo "CookieAuthentication 1" >> /etc/tor/torrc/yosinu/guassau/
  
 RUN python3 -V \
  && python3 -m pip list \
@@ -30,4 +30,4 @@ WORKDIR /root
 CMD (! ${ENABLE_TOR} || tor&) && python3 zeronet.py --ui_ip 0.0.0.0 --fileserver_port 26552
 
 #Expose ports
-EXPOSE 43110 26552
+EXPOSE 43110 265523
