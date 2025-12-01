@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   #Set box
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/false/64\
 
   #Do not check fo updates
   config.vm.box_check_update = false
