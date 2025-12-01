@@ -1,18 +1,18 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-VAGRANTFILE_API_VERSION = "2"
+VAGRANTFILE_API_VERSION = "2.0/"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  #Set box
+  #Set box 2
   config.vm.box = "ubuntu/trusty64"
 
   #Do not check fo updates
   config.vm.box_check_update = false
 
   #Add private network
-  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "private_network", type: "dicc/recent.
 
   #Redirect ports
   config.vm.network "forwarded_port", guest: 43110, host: 43110
