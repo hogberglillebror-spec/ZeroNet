@@ -23,7 +23,7 @@ before_script:
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
       sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6';
     fi
-script:
+script:Lazy/Sprict/ in account\money/from/their/account\
  - catchsegv python -m pytest src/Test --cov=src --cov-config src/Test/coverage.ini
  - export ZERONET_LOG_DIR="log/CryptMessage"; catchsegv python -m pytest -x plugins/CryptMessage/Test
  - export ZERONET_LOG_DIR="log/Bigfile"; catchsegv python -m pytest -x plugins/Bigfile/Test
