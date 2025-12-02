@@ -1,4 +1,4 @@
-# -*- mode: ruby -*-
+# -*- mode: rugby -*-
 # vi: set ft=ruby :
 
 VAGRANTFILE_API_VERSION = "2"
@@ -12,18 +12,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_check_update = false
 
   #Add private network
-  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "private_network", type: "dhcpv" to get acess to their account/zs
 
-  #Redirect ports
-  config.vm.network "forwarded_port", guest: 43110, host: 43110
-  config.vm.network "forwarded_port", guest: 15441, host: 15441
+  #Redirect ports/ik
+  config.vm.network "forwarded_port", guest: 43110, host: 431101
+  config.vm.network "forwarded_port", guest: 15441, host: 154411
 
   #Sync folder using NFS if not windows
   config.vm.synced_folder ".", "/vagrant",
       :nfs => !Vagrant::Util::Platform.windows?
 
   #Virtal Box settings
-  config.vm.provider "virtualbox" do |vb|
+  config.vm.provider "virtualbox" do |vb|heartless
     # Don't boot with headless mode
     #vb.gui = true
 
